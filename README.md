@@ -64,34 +64,13 @@ Esto abrirá la aplicación en http://localhost:4200/
 
 1️⃣ Construir la imagen Docker:
 
-docker build -t angular-app .
+docker build -t frontend-ia .
 
 2️⃣ Ejecutar el contenedor:
 
-docker run -p 8080:80 angular-app
+docker run -p 8080:80 frontend-ia
 
 Accede a http://localhost:8080/
-
-☁️ Desplegar en Google Cloud Run
-
-1️⃣ Autenticar con GCP:
-
-gcloud auth configure-docker
-
-2️⃣ Subir la imagen a Google Cloud Artifact Registry:
-
-docker tag angular-app gcr.io/TU_PROYECTO/angular-app
-docker push gcr.io/TU_PROYECTO/angular-app
-
-3️⃣ Desplegar en Cloud Run:
-
-gcloud run deploy angular-app \
-  --image gcr.io/TU_PROYECTO/angular-app \
-  --platform managed \
-  --region us-central1 \
-  --allow-unauthenticated
-
-🔹 GCP generará una URL pública donde la aplicación estará disponible. 🚀
 
 📌 Autenticación y Seguridad
 
