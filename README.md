@@ -47,8 +47,8 @@ Cuenta en Google Cloud Platform (Para el despliegue en GCP, opcional)
 
 1️⃣ Clonar el Repositorio:
 
-git clone https://github.com/tu-usuario/proyecto-angular.git
-cd proyecto-angular
+git clone https://github.com/williamalarcon/app-ia-coud.git
+cd app-ia-coud
 
 2️⃣ Instalar Dependencias:
 
@@ -72,17 +72,3 @@ docker run -p 8080:80 frontend-ia
 
 Accede a http://localhost:8080/
 
-📌 Autenticación y Seguridad
-
-Actualmente la autenticación no se realiza con Firebase.
-
-Se recomienda utilizar JWT o integración con OAuth2 si se necesita autenticación segura.
-
-Implementar validaciones en los formularios y en la API para proteger los datos.
-
-📋 Próximos Pasos
-
-✅ Mejorar la experiencia UX/UI
-✅ Integración con la API
-✅ Optimización de rendimiento
-✅ Implementación de pruebas unitarias
