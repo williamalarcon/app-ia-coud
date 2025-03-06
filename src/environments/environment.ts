@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   defaultauth: '',
-  endpointRest: 'http://35.206.84.155:8000',
+  //endpointRest: 'http://35.206.84.155:8000',
+  endpointRest: 'http://localhost:8000',
   firebaseConfig: {
     apiKey: '',
     authDomain: '',
