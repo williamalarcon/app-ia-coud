@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 
 // counter
 import { CountUpModule } from 'ngx-countup';
-import { NgbDropdownModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbDatepickerModule, NgbDropdownModule, NgbNavModule, NgbPaginationModule, NgbTypeaheadModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { SimplebarAngularModule } from 'simplebar-angular';
 import { CarouselModule } from 'ngx-owl-carousel-o';
@@ -20,10 +20,15 @@ import { AppsModule } from './apps/apps.module';
 import { PagesRoutingModule } from './pages-routing.module';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ChatComponent } from './dashboard/chat/chat.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DropzoneModule } from 'ngx-dropzone-wrapper';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
 @NgModule({
   declarations: [
-    DashboardComponent
+    DashboardComponent,
+    ChatComponent
   ],
   imports: [
     CommonModule,
@@ -39,7 +44,19 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     NgbDropdownModule,
     NgbNavModule,
     AppsModule,
-    LeafletModule
+    LeafletModule,
+    CommonModule,
+    SharedModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgbDropdownModule,
+    NgbNavModule,
+    DropzoneModule,
+    NgbPaginationModule,
+    SimplebarAngularModule,
+    CKEditorModule,
+    NgbTypeaheadModule,
+    NgbDatepickerModule
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })

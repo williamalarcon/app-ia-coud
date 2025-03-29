@@ -69,7 +69,7 @@ export class ChatService {
         'Authorization': `Bearer ${currentUser.access_token}`,
         'Accept': '*/*'
       };
-      const url = `${environment.endpointRest}/api/v1/documents`;
+      const url = `${environment.endpointRest}/api/v1/documents/5`;
       return this.http.get(url, { headers });
     }
 

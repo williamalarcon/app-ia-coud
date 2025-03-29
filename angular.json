@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/frontent-ia",
+            "outputPath": "dist/frontend-ia",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -104,10 +104,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "minia:build:production"
+              "buildTarget": "frontent-ia:build:production"
             },
             "development": {
-              "buildTarget": "minia:build:development"
+              "buildTarget": "frontent-ia:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -115,7 +115,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "minia:build"
+            "buildTarget": "frontent-ia:build"
           }
         },
         "test": {

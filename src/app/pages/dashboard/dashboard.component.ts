@@ -7,6 +7,7 @@ import am5geodata_worldLow from "@amcharts/amcharts5-geodata/worldLow";
 
 import { walletOverview, investedOverview, marketOverview, walletlineChart, tradeslineChart, investedlineChart, profitlineChart, recentActivity, News, transactionsAll, transactionsBuy, transactionsSell } from './data';
 import { ChartType } from './dashboard.model';
+import { ChatService } from 'src/app/core/services/chat.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -50,20 +51,22 @@ export class DashboardComponent implements OnInit {
     }
   }
 
-  constructor() {
+  totalChats:number = 0;
+
+  constructor(private __chatService: ChatService) {
   }
 
   option = {
     startVal: this.num,
     useEasing: true,
     duration: 2,
-    decimalPlaces: 2,
+    decimalPlaces: 0,
   };
 
 
   ngOnInit(): void {
     /**
-     * BreadCrumb 
+     * BreadCrumb
      */
     this.breadCrumbItems = [
       { label: 'Dashboard' },
@@ -143,5 +146,20 @@ export class DashboardComponent implements OnInit {
       pointSeries.pushDataItem({ latitude: 71.7069, longitude: -42.6043 });
 
     }, 0);
+  }
+
+
+  getConversations(){
+    // En tu componente
+      this.__chatService.getConversations().subscribe(
+      response => {
+        this.totalChats = response.length;
+        console.log('Lista de conversaciones:', response);
+        console.log('PRUEBA:', response.length);
+      },
+      error => {
+        console.error('Error al obtener los documentos:', error);
+      }
+    );
   }
 }

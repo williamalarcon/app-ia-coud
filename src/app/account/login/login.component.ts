@@ -73,7 +73,7 @@ export class LoginComponent implements OnInit {
     } else {
         this.authFackservice.login(this.f.email.value, this.f.password.value).subscribe(
           data => {
-            this.router.navigate(['/apps/chat']);
+            this.router.navigate(['/']);
           },
           error => {
             console.log("error")
