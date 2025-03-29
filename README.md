@@ -64,11 +64,11 @@ Esto abrirá la aplicación en http://localhost:4200/
 
 1️⃣ Construir la imagen Docker:
 
-docker build -t frontend-ia .
+docker build -t frontent-ia .
 
 2️⃣ Ejecutar el contenedor:
 
-docker run -p 8080:80 frontend-ia
+docker run -p 8080:80 frontent-ia
 
 Accede a http://localhost:8080/
 
