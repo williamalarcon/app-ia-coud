@@ -3,7 +3,7 @@ services:
   frontend:
     build:
       context: ../app-ia-coud
-    container_name: frontend_doc_analyze
+    container_name: frontent-ia
     ports:
       - "80:80"
     restart: always
