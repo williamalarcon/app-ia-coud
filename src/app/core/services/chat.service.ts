@@ -52,10 +52,13 @@ export class ChatService {
       const currentUser = this.authFackservice.currentUserValue;
       const headers = {
         'Authorization': `Bearer ${currentUser.access_token}`,
-        'Question': question
+       // 'Question': question
       };
       const url = `${environment.endpointRest}/api/v1/analysis/ask/${id}`;
-      const params = { question };
+      const params = {
+        rag: true,
+        question
+      };
       return this.http.post(url, {}, { headers, params });
     }
 
